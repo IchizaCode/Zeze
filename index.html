@@ -6,27 +6,43 @@
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="slides slides1">
-            <h2></h2>
-        </div>
-        <div class="slides slides2">
-            <h2></h2>
-        </div>
-        <div class="slides slides3">
-            <h2></h2>
-        </div>
-        <div class="slides slides4">
-            <h2></h2>
-        </div>
-        <div class="slides slides5">
+        <div class="slides slides1"><h2></h2></div>
+        <div class="slides slides2"><h2></h2></div>
+        <div class="slides slides3"><h2></h2></div>
+        <div class="slides slides4"><h2></h2></div>
+        <div class="slides slides5"><h2></h2></div>
+    </div>
 
-            <h2></h2>
+    <!-- Bee button (hidden until last slide is in view) -->
+    <button class="bee-btn" id="beeBtn" title="Subscribe to weekly love letters">🐝</button>
+
+    <!-- Modal overlay -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+
+            <div id="formView">
+                <span style="font-size:44px">🐝</span>
+                <br>
+                <span class="honey-tag">52 weekly love letters</span>
+                <h2>A reason I love you, every week</h2>
+                <p>Every Sunday, a little note lands in your inbox — one thing I love about you. 52 weeks of honey, just for you.</p>
+                <input type="email" id="emailInput" placeholder="your@email.com" />
+                <p id="errorMsg" style="display:none; color:#993C1D; font-size:13px; margin-bottom:8px;"></p>
+                <button class="sub-btn" id="subBtn" onclick="handleSubscribe()">Subscribe 🍯</button>
+            </div>
+
+            <div id="successView" style="display:none; flex-direction:column; align-items:center; gap:10px; text-align:center;">
+                <span style="font-size:48px">💌</span>
+                <h2>You're in!</h2>
+                <p>Your first letter arrives next Sunday.<br>52 weeks of love, on their way.</p>
+            </div>
         </div>
     </div>
-    
 
-
+    <script src="script.js"></script>
 </body>
 </html>
