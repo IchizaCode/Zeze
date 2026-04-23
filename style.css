@@ -14,7 +14,7 @@
 .slides{
     width: 100%;
     height: 100vh;
-    background-size:contain;
+    background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
     display: flex;
@@ -50,7 +50,7 @@
 }
 
 .slides5{
-    background-image: url("images/img5.png");
+    background-image: url("images/Img5.png");
     animation: slide5 10s infinite;
 }
 
@@ -134,3 +134,15 @@
 }
 .sub-btn:hover { background: #EF9F27; }
 .sub-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) and (orientation: portrait) {
+    .slides1 { background-image: url("images/Img1_mobile.png"); }
+    .slides2 { background-image: url("images/Img2_mobile.png"); }
+    .slides3 { background-image: url("images/Img3_mobile.png"); }
+    .slides4 { background-image: url("images/Img4_mobile.png"); }
+    .slides5 { background-image: url("images/Img5_mobile.png"); }
+
+    .bee-btn { bottom: 20px; right: 20px; width: 52px; height: 52px; font-size: 24px; }
+    .modal { width: 92vw; padding: 1.5rem 1.25rem; }
+}
